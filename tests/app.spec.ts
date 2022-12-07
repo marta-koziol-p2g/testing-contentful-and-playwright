@@ -11,4 +11,16 @@ test.describe('Blog Homepage', () => {
     expect(h1).toBe('Blog.');
   });
 
+  // test('Blog', async ({ page }) => {
+  //   await page.getByText('Learning Playwright Workflows').click();
+  //   const h1 = await page.textContent('h1');
+  //   expect(h1).toBe('Learning Playwright Workflows');
+  // });
+
+  test('Blog2', async ({ page}) => {
+    await page.goto(`http://localhost:3000/posts/learning-playwright-workflows`);
+       const h1 = await page.textContent('h1');
+    expect(h1).toBe('Learning Playwright Workflows');
+  });
+
 });
