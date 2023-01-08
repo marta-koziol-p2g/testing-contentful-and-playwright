@@ -13,7 +13,7 @@ test.describe('Blog Homepage', () => {
 
   test('should access Blog 1 by click', async ({ page }) => {
     await page.getByText('Learning Playwright Workflows').click();
-    await page.goto(`posts/learning-playwright-workflows`);
+    // await page.goto(`posts/learning-playwright-workflows`);
     const h1 = await page.textContent('h1');
     expect(h1).toBe('Learning Playwright Workflows');
   });
