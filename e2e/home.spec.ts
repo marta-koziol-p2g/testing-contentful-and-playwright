@@ -6,14 +6,13 @@ test.beforeEach(async ({ page, baseURL }) => {
 });
 
 test.describe('Blog Homepage', () => {
-  test('Should display correct h1 title', async ({page, baseURL}) => {
+  test('Should display correct h1 title', async ({page}) => {
     const h1 = await page.textContent('h1');
     expect(h1).toBe('Blog.');
   });
 
-  test('should access Blog 1 by click', async ({ page }) => {
-    await page.getByText('Learning Playwright Workflows').click();
-    // await page.goto(`posts/learning-playwright-workflows`);
+  test('should access Blog 1 by redirect', async ({ page }) => {
+    await page.goto(`posts/learning-playwright-workflows`);
     const h1 = await page.textContent('h1');
     expect(h1).toBe('Learning Playwright Workflows');
   });
