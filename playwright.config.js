@@ -13,12 +13,12 @@ const { devices } = require('@playwright/test');
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
 const config = {
-  webServer: {
-    command: 'npm run start',
-    url: 'http://localhost:3000',
-    reuseExistingServer: true,
-    timeout: 5 * 60 * 1000,
-  },
+  // webServer: {
+  //   command: 'npm run start',
+  //   url: 'http://localhost:3000',
+  //   reuseExistingServer: true,
+  //   timeout: 5 * 60 * 1000,
+  // },
   testDir: './tests',
   /* Maximum time one test can run for. */
   timeout: 5 * 60 * 1000,
