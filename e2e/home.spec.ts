@@ -6,8 +6,8 @@ import { expect, test, webkit} from '@playwright/test';
 // });
 
 test.describe('Blog Homepage', () => {
-  test('Should display correct h1 title', async ({page},...rest) => {
-    await page.goto(`/`);
+  test('Should display correct h1 title', async ({page, baseURL}) => {
+    await page.goto(baseURL || 'http://localhost:3000');
 
     const h1 = await page.textContent('h1');
     expect(h1).toBe('Blog.');
