@@ -1,0 +1,8 @@
+{
+    "baseUrl":"https://parcel2go.github.io",
+    "viewportHeight": 1200,
+    "viewportWidth": 1200,
+    "env":{
+
+    }
+}

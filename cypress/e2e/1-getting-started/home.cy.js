@@ -2,7 +2,7 @@
 
 context("Home Page", () => {
     beforeEach(() => {
-        cy.visit("http://localhost:3000")
+        cy.visit("https://parcel2go.github.io")
     })
 
     it("should find welcome page", () => {
@@ -12,7 +12,7 @@ context("Home Page", () => {
 
 context("Blog", () => {
     beforeEach(() => {
-        cy.visit("http://localhost:3000/posts/learning-playwright-workflows")
+        cy.visit("https://parcel2go.github.io/ui-static/homepage")
     })
 
     it("should find welcome page", () => {

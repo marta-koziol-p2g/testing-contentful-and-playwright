@@ -7,8 +7,8 @@ import { expect, test, webkit} from '@playwright/test';
 
 test.describe('Blog Homepage', () => {
   test('Should display correct h1 title', async ({page},...rest) => {
-    await page.goto(`http://localhost:3000`);
-    console.log({rest})
+    await page.goto(`/ui-static/homepage/`);
+
     const h1 = await page.textContent('h1');
     expect(h1).toBe('Blog.');
   });
@@ -21,8 +21,8 @@ test.describe('Blog Homepage', () => {
   // });
 
   test('Blog2', async ({page},...rest) => {
-    console.log({rest})
-    await page.goto(`http://localhost:3000/posts/learning-playwright-workflows`);
+
+    await page.goto(`/ui-static/homepage/`);
     await page.waitForLoadState('networkidle');
     const h1 = await page.textContent('h1');
     expect(h1).toBe('Learning Playwright Workflows');
