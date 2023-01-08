@@ -17,8 +17,6 @@ jobs:
         node-version: 16
     - name: Install dependencies
       run: npm ci
-    - name: Run next start
-      run: npm run start
     - name: Run Playwright tests
       run: npm run playwright
     - uses: actions/upload-artifact@v3
