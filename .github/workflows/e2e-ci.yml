@@ -16,6 +16,14 @@ jobs:
         run: npm ci
       - name: Run build
         run: npm run build  
+      - name: List Files
+        id: list-files
+        uses: mirko-felice/list-files-action@v3.0.1
+        with:
+          repo: ${{ github.repository }}
+          ref: ${{ github.ref }}
+          path: "."
+          ext: ".yml"
       - name: install playwright browsers
         run: npx playwright install --with-deps
       - name: npm run test:e2e
