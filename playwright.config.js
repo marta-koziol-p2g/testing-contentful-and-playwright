@@ -16,7 +16,7 @@ const config = {
   webServer: {
     command: 'ls -a && npm run start',
     url: 'http://localhost:3000',
-    reuseExistingServer: false,
+    reuseExistingServer: !process.env.CI,
     // timeout: 5 * 60 * 1000,
   },
   testDir: './e2e',
