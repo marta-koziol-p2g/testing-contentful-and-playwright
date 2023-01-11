@@ -14,9 +14,9 @@ const { devices } = require('@playwright/test');
  */
 const config = {
   webServer: {
-    command: 'npm run start',
+    command: 'ls -a && npm run start',
     url: 'http://localhost:3000',
-    reuseExistingServer: true,
+    reuseExistingServer: false,
     // timeout: 5 * 60 * 1000,
   },
   testDir: './e2e',
