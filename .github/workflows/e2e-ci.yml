@@ -20,6 +20,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: npm run test:e2e
         run: npm run test:e2e
+        env:
+          DEBUG: pw:api
 
   # tests_e2e_netlify_prepare:
   #   name: Wait for deployment on Netlify
